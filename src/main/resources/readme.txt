@@ -1,0 +1,45 @@
+1.SpringMVC的基本概念
+	1.关于三层架构和MVC
+		1.三层架构：服务器端分成三层框架
+			*表现层（Model-->javaBean）：SpringMVC
+				功能：
+					*浏览器和服务器进行的数据的交互
+					*接受客户端的请求参数
+					*将结果返回给客户端
+			*业务层（view-->JSP）：Spring
+			*持久层（Controller-->Servlet）：Mybatis
+	2.SpringMVC是一种基于java实现的MVC设计模型的请求驱动类型的轻量级web框架，能够通过一套注解让一个简单的java类成为处理请求的
+	    控制器，而无需实现任何接口，同时还支持RESTful编程风格的请求
+	3.MVC位于三层框架中的位置：表现层
+	4.SpringMVC的优势：
+		1.清晰的角色划分
+		2.分工明确
+		3.由于命令对象就是一个POJO，无需继承框架的特定API，可以使用命令对象直接作为业务对象
+		4.和Spring其他框架的无缝集成
+	5.Spring和Struts2的优劣分析
+		*共同点：
+			*都是表现层框架，都是基于MVC模型编写的
+			*底层都离不开原始ServletAPI
+			*处理请求的机制都是一个核心控制器
+		*区别：
+			*SpringMVC的入口是Servlet，而Struts2是Filter
+			*SpringMVC是基于方法设计的，Struts2是基于类。Struts2每执行一次都会创建一个动作类，所以SpringMVC会稍微比Struts2快一点
+			*SpringMVC更加简洁，处理ajax请求更方便
+
+
+2.入门程序的需求
+	*SpringMVC框架基于组件的方式执行流程，前端控制器，适配器都是一个组件
+	*index.jsp（发出请求）--->编写类；编写方法；转发到成功jsp界面
+	
+	步骤：
+		1.搭建开发环境
+			1.设置maven项目，记得看maven的教程，里面很重要的一个设置，是需要保证maven从本地获取依赖的库
+			2.需要将maven搭建的项目的目录补全。在main目录下新加两个文件夹，分别是java和resources。其中java文件夹设置为源码文件，resources设置为资源文件，可以写一些jsp文件在里面
+			3.准备相关的jar包
+			4.配置前端控制器，也就是在web.sml文件中写入servlet
+			5.写一个服务器的配置文件
+		2.编写入门程序：
+			@RequestMapping注解：
+				作用：用于建立请求URL和处理请求方法之间的对应关系
+				位置：可以作用于方法上或者是类上；如果是放在类上，可以有多级目录的形式。
+			
