@@ -31,4 +31,12 @@ public class AnnoController {
         System.out.println("done....");
         return "success";
     }
+
+
+    @RequestMapping("/testCookieValue")
+    public String testCookieValue(@CookieValue(value="JSESSIONID") String cookieValue){
+        System.out.println(cookieValue);
+        System.out.println("done....");
+        return "success";
+    }
 }

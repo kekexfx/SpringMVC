@@ -24,7 +24,11 @@
 
     </form>
     <a href="anno/testPathVariable/10">RequestParam</a>
+    <br>
     <a href="anno/testRequestHeader">RequestHeader</a>
+    <br>
+    <a href="anno/testCookieValue">CookieValue</a>
+    <br>
 
 </body>
 </html>
