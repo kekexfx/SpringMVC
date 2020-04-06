@@ -5,6 +5,11 @@ import cn.itcast.domain.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/param")
 public class ParamController {
@@ -32,6 +37,21 @@ public class ParamController {
         System.out.println("done...");
         System.out.println(user);
 
+        return "success";
+
+    }
+    /*
+    * 远程api获取
+    * */
+    @RequestMapping("/testServlet")
+    public String testServlet(HttpServletRequest request, HttpServletResponse response){
+        System.out.println("done...");
+        System.out.println(request);
+        HttpSession session = request.getSession();
+        System.out.println(session);
+        ServletContext servletContext = session.getServletContext();
+        System.out.println(servletContext);
+        System.out.println(response);
         return "success";
 
     }

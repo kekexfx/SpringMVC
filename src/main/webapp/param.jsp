@@ -35,12 +35,14 @@
         用户年龄：<input type="text" name = "map['two'].age"/><br/>
         <input type="submit" value= "提交"/><br/>
     </form>
-    --%>
+
     <form action="param/saveUser" method="post">
         用户姓名：<input type="text" name = "uname"/><br/>
         用户年龄：<input type="text" name = "age"/><br/>
         用户生日：<input type="text" name = "date"/><br/>
         <input type="submit" value= "提交"/><br/>
     </form>
+    --%>
+    <a href = "param/testServlet">原生api</a>
 </body>
 </html>
