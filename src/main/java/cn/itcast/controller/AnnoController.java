@@ -39,4 +39,14 @@ public class AnnoController {
         System.out.println("done....");
         return "success";
     }
+    @RequestMapping("/testModelAttribute")
+    public String testModelAttribute(){
+        System.out.println(" MA done....");
+        return "success";
+    }
+
+    @ModelAttribute
+    public void showUser(){
+        System.out.println("showUser is done...");
+    }
 }
