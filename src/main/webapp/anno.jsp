@@ -37,5 +37,8 @@
     </form>
     <br>
 
+    <a href="anno/testSessionAttributes">SessionAttributes</a>
+    <br>
+
 </body>
 </html>

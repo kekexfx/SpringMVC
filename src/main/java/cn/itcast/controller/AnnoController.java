@@ -1,10 +1,12 @@
 package cn.itcast.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/anno")
+@SessionAttributes(value={"msg"})
 public class AnnoController {
 
     @RequestMapping("/testRequestParam")
@@ -45,8 +47,12 @@ public class AnnoController {
         return "success";
     }
 
-    @ModelAttribute
-    public void showUser(){
-        System.out.println("showUser is done...");
+    @RequestMapping("/testSessionAttributes")
+    public String testSessionAttributes(Model model){
+        System.out.println(" SA done....");
+        model.addAttribute("msg","美美");
+
+
+        return "success";
     }
 }
