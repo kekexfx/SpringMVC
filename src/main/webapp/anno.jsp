@@ -12,5 +12,14 @@
 </head>
 <body>
     <a href="anno/testRequestParam?name=哈哈">RequestParam</a>
+
+    <br>
+
+    <form action="anno/testRequestBody" method="post">
+        用户姓名：<input type="text" name = "username"/><br/>
+        用户年龄：<input type="text" name = "age"/><br/>
+
+        <input type="submit" value= "提交"/><br/>
+    </form>
 </body>
 </html>
