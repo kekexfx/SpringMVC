@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <a href="anno/testRequestParam?name=哈哈">RequestParam</a>
+    <a href="anno/testRequestParam">RequestParam</a>
 
     <br>
 
@@ -20,6 +20,9 @@
         用户年龄：<input type="text" name = "age"/><br/>
 
         <input type="submit" value= "提交"/><br/>
+
+
     </form>
+    <a href="anno/testPathVariable/10">RequestParam</a>
 </body>
 </html>
